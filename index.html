@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <h1>Payment</h1>
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <form action="index.html" method="post">
+      <div class="container">
+        <h1>Payment</h1>
+        <hr />
+
+        <label for="name"><b>Name of the Account Holder</b></label>
+        <input type="text" placeholder="Enter name" name="name" required />
+
+        <label for="account number"><b>Account Number</b></label>
+        <input
+          type="number"
+          placeholder="Enter Account Number"
+          name="account number"
+          id="account number"
+          required
+          onkeyup="checkAccountNumber(); return false;"
+        />
+        <span id="account numberError"></span>
+
+        <label for="confirm account number">
+          <b>Confirm Account Number</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Confirm Account Number"
+          name="confirm account number"
+          id="confirm account number"
+          required
+          onkeyup="checkConfirmAccountNumber(); return false;"
+        />
+        <span id="confirm account numberError"></span>
+
+        <label for="mobile number"><b>Mobile Number</b></label>
+        <input
+          type="number"
+          placeholder="Enter Mobile Number"
+          name="mobile number"
+          id="mobile number"
+          required
+          onkeyup="checkMobileNumber(); return false;"
+        />
+        <span id="mobile numberError"></span>
+        <hr />
+
+        <button
+          type="submit"
+          class="registerbtn"
+          id="output"
+          onclick="checkAll(); return false;"
+        >
+          Submit
+        </button>
+        <button
+          type="submit"
+          class="registerbtn"
+          id="output"
+          onclick="deleteAll(); return false;"
+        >
+          Delete
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
